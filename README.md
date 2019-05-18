@@ -1,5 +1,6 @@
-# automating-aws-with-python
-Repository for Automating AWS with Python
+# Automating AWS With Python
+
+Repository for AWS boto3 python code
 
 *Automating AWS with Python*
 

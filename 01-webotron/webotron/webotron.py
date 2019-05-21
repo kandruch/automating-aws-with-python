@@ -4,7 +4,7 @@ from botocore.exceptions import ClientError
 from pathlib import Path
 import mimetypes
 
-session = boto3.Session(profile_name='pythonAutomation')
+session = boto3.Session(profile_name='default')
 s3 = session.resource('s3')
 
 @click.group()

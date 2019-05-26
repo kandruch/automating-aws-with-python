@@ -4,9 +4,9 @@ Repository for AWS boto3 python code
 
 *Automating AWS with Python*
 
-## botoTron
+## BotoTron
 
-botoTron is a script that will retrieve fetch AWS services data for easy access.
+BotoTron is a script that will retrieve fetch AWS services data for easy access.
 
 ### Features
 

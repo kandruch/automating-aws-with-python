@@ -14,3 +14,4 @@ BotoTron currently has the following features:
 
 - List EC2 data in a colour coded output
 - Set AWS profile with --profile=<profilename>
+- List ACM certificates

@@ -10,9 +10,10 @@ BotoTron automates the process of retriving AWS information
 import boto3
 import click
 from termcolor import colored
+from pprint import pprint
 
 
-# session = boto3.Session(profile_name='default')
+session = boto3.Session(profile_name='default')
 ec2resource = boto3.resource('ec2')
 
 @click.group()
@@ -37,6 +38,14 @@ def cli(profile):
 #         	"PublicIP" + ' ' + instance.public_ip_address,
 #         	"PrivateIP" + ' ' + instance.private_ip_address)
 
+@cli.command('list-certificates')
+def list_out_certificates():
+    """Get the list of certificates."""
+    acm_client = session.client('acm', region_name='us-east-1')
+    paginator = acm_client.get_paginator('list_certificates')
+    for page in paginator.paginate(CertificateStatuses=['ISSUED']):
+        for cert in page['CertificateSummaryList']:
+            pprint(cert)
 
 @cli.command('all-ec2-data')
 def get_all_ec2_data():

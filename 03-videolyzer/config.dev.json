@@ -1,0 +1,7 @@
+{
+	"videolyzer": {
+		"profile": "default",
+		"videos_bucket": "keithvideolyzervideos123456",
+		"videos_table": ""
+	}
+}
